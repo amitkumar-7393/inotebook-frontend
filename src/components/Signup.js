@@ -14,13 +14,16 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://inotebook-backend-jet.vercel.app/api/auth",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(credentials),
         },
-        body: JSON.stringify(credentials),
-      });
+      );
 
       const data = await response.json();
 

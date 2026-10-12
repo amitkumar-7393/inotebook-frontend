@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import noteContext from "./noteContext";
 
-const API_URL = "http://localhost:5000/api/notes";
-
+const API_URL = "https://inotebook-backend-jet.vercel.app/api/notes";
 const NoteState = (props) => {
   const [notes, setNotes] = useState([]);
   const [alert, setAlert] = useState(null);
